@@ -41,8 +41,8 @@ const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
         const user = await userModel.findOne({ email })
-        if (!email) {
-            return res({ success: false, message: "User does not exist" })
+        if (!user) {
+            return res.json({ success: false, message: "User does not exist" })
         }
 
         const isMatch = await bcrypt.compare(password, user.password)
@@ -70,20 +70,30 @@ const loginUser = async (req, res) => {
 
 const userCredits = async (req, res) => {
     try {
-        const { userId } = req.body
-        const user = await userModel.findById(userId)
+        const userId = req.userId;
+        const user = await userModel.findById(userId);
+
+        if (!user) {
+            return res.json({
+                success: false,
+                message: "User not found"
+            });
+        }
 
         res.json({
             success: true,
             credit: user.creditBalance,
             user: { name: user.name }
-        })
-
+        });
     } catch (error) {
-        console.log(error.message)
-        res.json({ success: false, message: "Error in userCredits" })
+        console.log(error.message);
+        res.json({
+            success: false,
+            message: "Error in userCredits"
+        });
     }
-}
+};
+
 
 
 export { registerUser, loginUser, userCredits }
