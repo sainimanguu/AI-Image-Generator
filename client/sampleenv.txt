@@ -1,0 +1,5 @@
+VITE_BACKEND_URL='http://localhost:4000' -client side
+MONGODB_URI=mongodb+srv://sainiumang:<password>@cluster0.nrzsxkv.mongodb.net/
+JWT_SECRET="secret#text"
+CLIPDROP_API=####
+
