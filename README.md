@@ -72,5 +72,3 @@ NODE_ENV=development
 | POST   | `/login`    | Log in existing user         |
 | GET    | `/me`       | Fetch logged-in user details |
 
-🧑‍🎨 Author
-Umang Saini
