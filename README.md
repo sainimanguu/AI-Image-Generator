@@ -35,11 +35,11 @@ ai-image-generator/
 ⚡️Environment Variables
 You need to create a .env file inside the server/ directory.
 Here’s a sample .env.sample content with explanations:
-# === MongoDB ===
+# MongoDB
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/ai-image-generator
 # MongoDB connection string for storing user data, tokens, and credits.
 
-# === JWT ===
+# JWT
 JWT_SECRET=your_jwt_secret_here
 # Secret key for signing and verifying JWT tokens (used in authentication).
 
