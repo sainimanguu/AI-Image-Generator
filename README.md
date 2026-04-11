@@ -37,27 +37,27 @@ You need to create a .env file inside the server/ directory.
 Here’s a sample .env.sample content with explanations:
 # MongoDB
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/ai-image-generator
-# MongoDB connection string for storing user data, tokens, and credits.
+MongoDB connection string for storing user data, tokens, and credits.
 
 # JWT
 JWT_SECRET=your_jwt_secret_here
-# Secret key for signing and verifying JWT tokens (used in authentication).
+Secret key for signing and verifying JWT tokens (used in authentication).
 
-# === AI Image Generation ===
+# AI Image Generation
 CLIPDROP_API=your_clipdrop_api_key_here
-# API key from ClipDrop (https://clipdrop.co/apis) for text-to-image generation.
+API key from ClipDrop (https://clipdrop.co/apis) for text-to-image generation.
 
-# === Server Config ===
-PORT=4000
-# Port on which the backend server runs.
+# Server Config
+PORT=8000
+Port on which the backend server runs.
 
-# === CORS / Frontend ===
+# CORS / Frontend ===
 CLIENT_URL=http://localhost:5173
-# Frontend app URL (React) for CORS configuration.
+Frontend app URL (React) for CORS configuration.
 
-# === Optional ===
+# Optional 
 NODE_ENV=development
-# Set to "production" in deployment environments.
+Set to "production" in deployment environments.
 
 
 | Method | Endpoint    | Description                  |
